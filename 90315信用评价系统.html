@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0021)http://www.90315.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="http://www.90315.org/">--><base href=".">
+
+<title>90315信用评价系统</title>
+<meta name="keywords" content="90315信用评价系统">
+<meta name="description" content="90315信用评价系统">
+<link href="./90315信用评价系统_files/css.css" rel="stylesheet" type="text/css">
+<script charset="utf-8" src="./90315信用评价系统_files/v.js.下载"></script><script type="text/javascript" src="./90315信用评价系统_files/jquery-1.11.0.min.js.下载"></script><script>
+$(function(){
+	$(".favorites").click(function(){
+		weblink = window.location;
+		webname = $(this).attr('webname');
+		var ctrl=(navigator.userAgent.toLowerCase()).indexOf('mac')!=-1?'Command/Cmd': 'CTRL';
+		if(document.all){
+			window.external.addFavorite(weblink, webname);
+		} else if(window.opera) {
+			this.rel="sidebar";
+			this.title = webname;
+			this.href = weblink;
+		} else if(window.sidebar){
+			window.sidebar.addPanel(webname, weblink, "");
+		} else {
+			alert('您可以通过快捷键' + ctrl + ' + D 加入到收藏夹');
+		}
+	})
+/*
+	$('form[name=form-newssearch] dt input').one('click',function(){
+		focus = $(this).attr('focus');
+		if (focus == 'false') {
+			$(this).attr('focus','true')
+			$(this).val('');
+		}
+	});
+	$('form[name=form-newssearch] dd').click(function(){
+		search = $('form[name=form-newssearch] input[name=search]').val();
+		search_focus = $('form[name=form-newssearch] input[name=search]').attr('focus');
+		if (search_focus == 'false' || search == '') {
+			alert('请输入关键字');
+			return false;
+		}
+		$('form[name=form-newssearch]').submit();
+	});
+*/
+        function showdate(){
+            var mydate=new Date();
+			$('.date .year').html(mydate.getFullYear());
+			$('.date .month').html((mydate.getMonth() + 1));
+			$('.date .day').html(mydate.getDate());
+			$('.date .hms').html(mydate.toLocaleTimeString());
+		};
+        setInterval(showdate,1000);
+});
+</script></head>
+
+
+<body style="">
+<div class="wwelcome">
+	<div class="html">
+    	<div class="welcome">
+        	<span class="left">欢迎来到90315信用评价系统 <span class="date"><span class="year">2017</span>年<span class="month">10</span>月<span class="day">29</span>日<span class="hms">下午6:51:37</span></span></span>
+        	<span class="right">
+            <a href="http://www.90315.org/news/info/27-1.html">建立信用档案</a> | 
+            <a href="http://www.90315.org/news/info/28-1.html">申请信用评级</a> | 
+            <a class="favorites" webname="90315信用评价系统">加入收藏</a>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="wtop"><div class="html"></div></div>
+<div class="html">
+	<div class="nav"><ul>
+    	<li><a href="http://www.90315.org/index.html">首   页</a></li>
+    	<li><a href="http://www.90315.org/news/info/1-1.html">关于我们</a></li>
+    	<li><a href="http://www.90315.org/news/more/2-1.html">政策法规</a></li>
+    	<li><a href="http://www.90315.org/news/more/3-1.html">行业资讯</a></li>
+    	<li><a href="http://www.90315.org/news/more/4-1.html">信用管理</a></li>
+    	<li><a href="http://www.90315.org/news/more/5-1.html">信用中国</a></li>
+    	<li><a href="http://www.90315.org/news/more/6-1.html">信用联盟</a></li>
+    	<li><a href="http://www.90315.org/news/more/7-1.html">业务介绍</a></li>
+    	<li><a href="http://www.90315.org/news/more/8-1.html">代理机构</a></li>
+    </ul></div>
+    <div class="clear2"></div>
+</div><script src="./90315信用评价系统_files/jquery.KinSlideshow-1.2.1.min.js.下载" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#KinSlideshow").KinSlideshow();
+	$('.xinyongquery .form .button').click(function(){
+		company = $('.xinyongquery .form dl dt input').val();
+		if (company == '') {
+			alert('请输入企业名称或信用编号');
+			return false;
+		}
+		
+			location.href='shiyequerysystem.result.php?df='+company;
+	});
+})
+</script>
+<div class="html">
+    <div class="ggw">
+    	       		<a href="http://www.90315.org/#" title="1"><img src="./90315信用评价系统_files/201605201442480.jpeg"></a>
+            </div>
+    <div class="clear2"></div>
+    <div class="news1">
+    	<div class="left1">
+        	<div class="newkuaixun">
+            	<div class="head"><span class="column">最新快讯</span></div>
+                <div class="list">
+	    <div id="KinSlideshow" style="width: 310px; height: 34px; overflow: hidden; position: relative; visibility: visible;">
+        <div id="KSS_moveBox" style="width: 310px; height: 34px; overflow: hidden; position: relative;"><div id="KSS_XposBox" style="float: left; width: 2000%;"><div id="KSS_content" style="float: left;"><a href="http://www.90315.org/news/view/479-1.html" target="_blank"><img src="http://www.90315.org/" alt="国办印发政务信息系统整合共享实施方案 强力推进“十件大事”" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/325-1.html" target="_blank"><img src="./90315信用评价系统_files/201603041510170.jpeg" alt="全国政协十二届四次会议开幕" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/281-1.html" target="_blank"><img src="./90315信用评价系统_files/201601041524340.jpeg" alt="国家主席习近平发表2016年新年贺词" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/149-1.html" target="_blank"><img src="./90315信用评价系统_files/201508131339420.jpeg" alt="李克强总理强调推进社会信用体系建设" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/141-1.html" target="_blank"><img src="./90315信用评价系统_files/201508131323420.jpeg" alt="李克强总理部署加快建设社会信用体系" width="600" height="300" style="border: 0px;"></a></div><div id="KSS_contentClone" style="float: left;"><a href="http://www.90315.org/news/view/479-1.html" target="_blank"><img src="http://www.90315.org/" alt="国办印发政务信息系统整合共享实施方案 强力推进“十件大事”" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/325-1.html" target="_blank"><img src="./90315信用评价系统_files/201603041510170.jpeg" alt="全国政协十二届四次会议开幕" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/281-1.html" target="_blank"><img src="./90315信用评价系统_files/201601041524340.jpeg" alt="国家主席习近平发表2016年新年贺词" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/149-1.html" target="_blank"><img src="./90315信用评价系统_files/201508131339420.jpeg" alt="李克强总理强调推进社会信用体系建设" width="600" height="300" style="border: 0px;"></a><a href="http://www.90315.org/news/view/141-1.html" target="_blank"><img src="./90315信用评价系统_files/201508131323420.jpeg" alt="李克强总理部署加快建设社会信用体系" width="600" height="300" style="border: 0px;"></a></div></div></div>
+    <div class="KSS_titleBar" style="height: 40px; width: 100%; position: absolute; bottom: 0px; left: 0px; background: rgb(0, 0, 0); opacity: 0.5;"></div><div class="KSS_titleBox" style="height: 40px; width: 100%; position: absolute; bottom: 0px; left: 0px;"><h2 class="title" style="margin: 3px 0px 0px 6px; padding: 0px; font-size: 12px; color: rgb(255, 255, 255); font-family: Verdana; font-weight: bold;">国家主席习近平发表2016年新年贺词</h2></div><div class="KSS_btnBox" style="position:absolute;right:10px;bottom:5px; z-index:100"><ul id="btnlistID" style="margin:0;padding:0; overflow:hidden"><li style="list-style: none; float: left; width: 18px; height: 18px; border-width: 1px; border-style: solid; text-align: center; cursor: pointer; margin-left: 3px; font-size: 12px; font-family: Verdana; line-height: 18px; opacity: 0.7; background: rgb(102, 102, 102); border-color: rgb(153, 153, 153); color: rgb(204, 204, 204);">1</li><li style="list-style: none; float: left; width: 18px; height: 18px; border-width: 1px; border-style: solid; text-align: center; cursor: pointer; margin-left: 3px; font-size: 12px; font-family: Verdana; line-height: 18px; opacity: 0.7; background: rgb(102, 102, 102); border-color: rgb(153, 153, 153); color: rgb(204, 204, 204);">2</li><li style="list-style: none; float: left; width: 18px; height: 18px; border-width: 1px; border-style: solid; text-align: center; cursor: pointer; margin-left: 3px; font-size: 12px; font-family: Verdana; line-height: 18px; opacity: 0.7; background: rgb(204, 0, 0); border-color: rgb(255, 0, 0); color: rgb(0, 0, 0);">3</li><li style="list-style: none; float: left; width: 18px; height: 18px; border-width: 1px; border-style: solid; text-align: center; cursor: pointer; margin-left: 3px; font-size: 12px; font-family: Verdana; line-height: 18px; opacity: 0.7; background: rgb(102, 102, 102); border-color: rgb(153, 153, 153); color: rgb(204, 204, 204);">4</li><li style="list-style: none; float: left; width: 18px; height: 18px; border-width: 1px; border-style: solid; text-align: center; cursor: pointer; margin-left: 3px; font-size: 12px; font-family: Verdana; line-height: 18px; opacity: 0.7; background: rgb(102, 102, 102); border-color: rgb(153, 153, 153); color: rgb(204, 204, 204);">5</li></ul></div></div>
+	    <div id="KinSlideshow" style="visibility:hidden;">
+        
+    </div>
+	    <div id="KinSlideshow" style="visibility:hidden;">
+        
+    </div>
+	    <div id="KinSlideshow" style="visibility:hidden;">
+        
+    </div>
+	    <div id="KinSlideshow" style="visibility:hidden;">
+        
+    </div>
+	            	</div>
+            </div>
+        </div>
+    	<div class="left1-2">
+        	<div class="newscenter">
+            	<div class="head"><span class="column">新闻中心</span><span class="more"><a href="http://www.90315.org/news/more/10-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><span class="addtime">07-03</span><a href="http://www.90315.org/news/view/485-1.html" title="中国信用体系建设促进工程启动 将开展六项工作" style="color:; font-weight:">中国信用体系建设促进工程启动将开展六项工作</a></li>
+                                <li><span class="addtime">06-23</span><a href="http://www.90315.org/news/view/484-1.html" title="公务员诚信：公信为本 做引领社会诚信“先行者”" style="color:; font-weight:">公务员诚信：公信为本做引领社会诚信“先行者”</a></li>
+                                <li><span class="addtime">05-25</span><a href="http://www.90315.org/news/view/483-1.html" title="国家发改委发布信用红黑名单制度征求意见稿" style="color:; font-weight:">国家发改委发布信用红黑名单制度征求意见稿</a></li>
+                                <li><span class="addtime">05-22</span><a href="http://www.90315.org/news/view/478-1.html" title="2017年社会信用体系建设部际联席会议明确“四抓四解”工作路径" style="color:; font-weight:">2017年社会信用体系建设部际联席会议明确“四抓四解”工作路</a></li>
+                                <li><span class="addtime">04-20</span><a href="http://www.90315.org/news/view/477-1.html" title="发改委：有关部门对失信主体累计限制乘坐飞机615万人次" style="color:; font-weight:">发改委：有关部门对失信主体累计限制乘坐飞机615万人次</a></li>
+                                <li><span class="addtime">04-11</span><a href="http://www.90315.org/news/view/476-1.html" title="大数据时代,隐私不能粗放管理" style="color:; font-weight:">大数据时代,隐私不能粗放管理</a></li>
+                                <li><span class="addtime">04-11</span><a href="http://www.90315.org/news/view/475-1.html" title="京津冀建联合惩戒系统 实现“一处失信三地受限”" style="color:; font-weight:">京津冀建联合惩戒系统实现“一处失信三地受限”</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    	<div class="right1">
+        	<div class="xinyongquery">
+            	<div class="head">信用评价结果查询系统</div>
+                <div class="form"><dl>
+                	<dt><input name="company" type="text" placeholder="请输入企业名称或信用编号"></dt>
+                  	<dd class="area">
+                  		<select name="area">
+                      	<option value="1">选择地区</option>
+                  		</select>
+                    </dd>
+                    <dd class="button"><img src="./90315信用评价系统_files/search-submit.png"></dd>
+                </dl></div>
+                <div class="clear"></div>
+            </div>
+        	<div class="querysystem"><ul>
+            	<li><a href="http://gsxt.saic.gov.cn/" target="_blank"><img src="./90315信用评价系统_files/system.gif"></a></li>
+            	<li><a href="http://www.90315.org/shiyequerysystem.php" target="_blank"><img src="./90315信用评价系统_files/system2.gif"></a></li>
+            	<li><a href="http://www.90315.org/gongyequerysystem.php" target="_blank"><img src="./90315信用评价系统_files/system3.gif"></a></li>
+            	<li><a href="http://www.90315.org/goodquerysystem.php" target="_blank"><img src="./90315信用评价系统_files/system4.gif"></a></li>
+            	<li><a href="http://www.90315.org/jobquerysystem.php" target="_blank"><img src="./90315信用评价系统_files/system5.gif"></a></li>
+            </ul></div>
+        </div>
+    </div>
+    <div class="clear2"></div>
+    <div class="news2">
+    	<div class="left2">
+        	<div class="board">
+            	<div class="head"><span class="column">通知公告</span><span class="more"><a href="http://www.90315.org/news/more/11-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/446-1.html" title="90315信用评价系统管理中心和北京住宅房地产业商会结成战略合作伙伴关系" style="color:; font-weight:">90315信用评价系统管理中心和北京</a></li>
+                                <li><a href="http://www.90315.org/news/view/301-1.html" title="合同终止通知函" style="color:; font-weight:">合同终止通知函</a></li>
+                                <li><a href="http://www.90315.org/news/view/172-1.html" title="热烈祝贺90315信用评价系统网站隆重上线" style="color:; font-weight:">热烈祝贺90315信用评价系统网站隆</a></li>
+                                <li><a href="http://www.90315.org/news/view/159-1.html" title="关于开展信用评价等工作的通知" style="color:; font-weight:">关于开展信用评价等工作的通知</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    	<div class="left2-2">
+        	<div class="chengxinshifan">
+            	<div class="head"><span class="column">诚信示范单位</span><span class="more"><a href="http://www.90315.org/news/more/12-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+				                <li><a href="http://www.90315.org/news/view/136-1.html" title="重庆东方药业股份有限公司" style="color:; font-weight:">重庆东方药业股份有限公司</a></li>
+                                <li><a href="http://www.90315.org/news/view/130-1.html" title="《世界家苑》杂志社" style="color:; font-weight:">《世界家苑》杂志社</a></li>
+                                <li><a href="http://www.90315.org/news/view/128-1.html" title="《健康导报》社" style="color:; font-weight:">《健康导报》社</a></li>
+                                <li><a href="http://www.90315.org/news/view/127-1.html" title="北京世界创新医学科学院" style="color:; font-weight:">北京世界创新医学科学院</a></li>
+                                <li><a href="http://www.90315.org/news/view/126-1.html" title="《世界华商经济年鉴》杂志社" style="color:; font-weight:">《世界华商经济年鉴》杂志社</a></li>
+                                <li><a href="http://www.90315.org/news/view/125-1.html" title="华夏现代健康产业投资管理有限公司" style="color:; font-weight:">华夏现代健康产业投资管理有限公司</a></li>
+                                <li><a href="http://www.90315.org/news/view/124-1.html" title="北京今日博览国际传媒广告有限公司" style="color:; font-weight:">北京今日博览国际传媒广告有限公司</a></li>
+                                <li><a href="http://www.90315.org/news/view/123-1.html" title="北京彩艺特印刷设计有限公司" style="color:; font-weight:">北京彩艺特印刷设计有限公司</a></li>
+                                <li><a href="http://www.90315.org/news/view/122-1.html" title="北京东方慧远会议展览中心" style="color:; font-weight:">北京东方慧远会议展览中心</a></li>
+                                <li><a href="http://www.90315.org/news/view/121-1.html" title="律务通（北京）科技有限公司" style="color:; font-weight:">律务通（北京）科技有限公司</a></li>
+                                <li><a href="http://www.90315.org/news/view/120-1.html" title="世界家苑（北京）文化传媒有限公司" style="color:; font-weight:">世界家苑（北京）文化传媒有限公司</a></li>
+                                <li><a href="http://www.90315.org/news/view/119-1.html" title="真医堂（北京）中医药科学研究院" style="color:; font-weight:">真医堂（北京）中医药科学研究院</a></li>
+                                <li><a href="http://www.90315.org/news/view/118-1.html" title="北京首联律师事务所" style="color:; font-weight:">北京首联律师事务所</a></li>
+                                <li><a href="http://www.90315.org/news/view/117-1.html" title="北京中研华夏中医药科学院" style="color:; font-weight:">北京中研华夏中医药科学院</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    	<div class="right2">
+        	<div class="newscenter">
+            	<div class="head"><span class="column">失信警示</span><span class="more"><a href="http://www.90315.org/news/more/13-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/394-1.html" title="安监总局要求强化安全生产“黑名单”制度" style="color:; font-weight:">安监总局要求强化安全生产“黑名</a></li>
+                                <li><a href="http://www.90315.org/news/view/392-1.html" title="媒体评魏则西事件：百度多少法律责任待澄清" style="color:; font-weight:">媒体评魏则西事件：百度多少法律</a></li>
+                                <li><a href="http://www.90315.org/news/view/372-1.html" title="全国信用信息共享平台首度发布同时被列入两个及两个以上“黑名单”的企业信息" style="color:; font-weight:">全国信用信息共享平台首度发布同</a></li>
+                                <li><a href="http://www.90315.org/news/view/139-1.html" title="市场抽检：欧诗雅、安裕等装饰装修材料不合格" style="color:; font-weight:">市场抽检：欧诗雅、安裕等装饰装</a></li>
+                                <li><a href="http://www.90315.org/news/view/138-1.html" title="通便灵茶 舒筋健腰丸等违法广告被曝光" style="color:; font-weight:">通便灵茶舒筋健腰丸等违法广告被</a></li>
+                                <li><a href="http://www.90315.org/news/view/137-1.html" title="武汉：6家电线电缆企业上黑榜" style="color:; font-weight:">武汉：6家电线电缆企业上黑榜</a></li>
+                                <li><a href="http://www.90315.org/news/view/135-1.html" title="市场抽检：凡客诚品、健乐士等标称品牌鞋质量有问题" style="color:; font-weight:">市场抽检：凡客诚品、健乐士等标</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear2"></div>
+    <div class="news3">
+    	<div class="left3">
+        	<div class="querysystempic"><ul>
+            	                <li><a href="http://www.90315.org/" title="诚信公约单位查询系统"><img src="./90315信用评价系统_files/201508111752500.gif"></a></li>
+                                <li><a href="http://www.china-baoli.com.cn/" title="保理通企业信用融资服务平台"><img src="./90315信用评价系统_files/201611021011500.jpeg"></a></li>
+                                <li><a href="http://www.90315.org/" title="90315信用评价系统"><img src="./90315信用评价系统_files/201508111749010.gif"></a></li>
+                                <li><a href="http://www.90315.org/" title="企业业信用信息公开系统"><img src="./90315信用评价系统_files/201508111752130.gif"></a></li>
+                            </ul></div>
+        </div>
+    	<div class="right3">
+        	<div class="servicehotline">
+                <div class="t">40010-90315</div>
+                <div class="t2">监督电话：182-100-90315</div>
+                <div class="t3">仅接收短信</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear2"></div>
+    		<div class="chinavideo">
+            	<div class="head"><span class="column">信用中国视频展播</span><span class="more"><a href="http://www.90315.org/news/more/14-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list">
+                
+                
+  <div id="demo" style="overflow: hidden; height: 160px; width: 1000px; clear:both; ">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="98%">
+      <tbody><tr>
+        <td id="demo1" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+      <td><a href="http://www.90315.org/news/view/332-1.html" title="信用周巡展"><img src="./90315信用评价系统_files/201603251112300.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/331-1.html" title="旅游城市诚与信"><img src="./90315信用评价系统_files/201603251111390.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/330-1.html" title="两会话信用"><img src="./90315信用评价系统_files/201603251110400.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/321-1.html" title="中国市场学会学术委员会副主任、信用学术委员会主任、CEI课题专家组长  林钧跃教授"><img src="./90315信用评价系统_files/201603010959150.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/252-1.html" title="中国市场学会信用工作委员会战略合作单位授牌、证书"><img src="http://www.90315.org/"></a></td>
+        <td><a href="http://www.90315.org/news/view/251-1.html" title="中国市场学会信用工作委员会战略合作单位授牌、证书"><img src="./90315信用评价系统_files/201510161045130.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/240-1.html" title="90315全国信用评价中心与中国市场学会信用工作委员会结为战略合作伙伴"><img src="./90315信用评价系统_files/201510141617010.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/166-1.html" title="视频6"><img src="./90315信用评价系统_files/201508131514080.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/164-1.html" title="视频4"><img src="./90315信用评价系统_files/201508131512280.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/161-1.html" title="视频1"><img src="./90315信用评价系统_files/201508131511440.jpeg"></a></td>
+      </tr>
+</tbody></table>
+</td>
+        <td id="demo2" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+      <td><a href="http://www.90315.org/news/view/332-1.html" title="信用周巡展"><img src="./90315信用评价系统_files/201603251112300.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/331-1.html" title="旅游城市诚与信"><img src="./90315信用评价系统_files/201603251111390.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/330-1.html" title="两会话信用"><img src="./90315信用评价系统_files/201603251110400.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/321-1.html" title="中国市场学会学术委员会副主任、信用学术委员会主任、CEI课题专家组长  林钧跃教授"><img src="./90315信用评价系统_files/201603010959150.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/252-1.html" title="中国市场学会信用工作委员会战略合作单位授牌、证书"><img src="http://www.90315.org/"></a></td>
+        <td><a href="http://www.90315.org/news/view/251-1.html" title="中国市场学会信用工作委员会战略合作单位授牌、证书"><img src="./90315信用评价系统_files/201510161045130.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/240-1.html" title="90315全国信用评价中心与中国市场学会信用工作委员会结为战略合作伙伴"><img src="./90315信用评价系统_files/201510141617010.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/166-1.html" title="视频6"><img src="./90315信用评价系统_files/201508131514080.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/164-1.html" title="视频4"><img src="./90315信用评价系统_files/201508131512280.jpeg"></a></td>
+        <td><a href="http://www.90315.org/news/view/161-1.html" title="视频1"><img src="./90315信用评价系统_files/201508131511440.jpeg"></a></td>
+      </tr>
+</tbody></table>
+</td>
+      </tr>
+    </tbody></table>
+  </div>
+<script>
+/*滚动图片开始*/
+function srcollpic(x,y,z){
+  var speed=30
+  var demo2=document.getElementById(x);
+  var demo1=document.getElementById(y);
+  var demo=document.getElementById(z);
+  demo2.innerHTML=demo1.innerHTML;
+  function Marquee(){
+  if(demo2.offsetWidth-demo.scrollLeft<=0)
+  demo.scrollLeft-=demo1.offsetWidth;
+  else{
+  demo.scrollLeft++;
+  }
+  }
+  var MyMar=setInterval(Marquee,speed)
+  demo.onmouseover=function() {clearInterval(MyMar)}
+  demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+}
+/*滚动图片结束*/
+srcollpic('demo2','demo1','demo')
+</script>
+                
+                
+                
+                <!--<ul>
+                <li></li>
+                </ul>-->
+                </div>
+                
+            </div>
+    <div class="clear2"></div>
+    <div class="ggw2">
+    	       		<a href="http://www.90315.org/" title="http//www.90315.org"><img src="./90315信用评价系统_files/201508111638520.jpeg"></a>
+            </div>
+    <div class="clear2"></div>
+    <div class="news4">
+    	<div class="left4">
+        	<div class="board">
+            	<div class="head"><span class="column">国务院文件公开</span><span class="more"><a href="http://www.90315.org/news/more/15-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/353-1.html" title="关于2016年深化经济体制改革重点工作的意见" style="color:; font-weight:">关于2016年深化经济体制改革重点工作的意见</a></li>
+                                <li><a href="http://www.90315.org/news/view/313-1.html" title="民政部关于探索建立社会组织第三方评估机制的指导意见" style="color:; font-weight:">民政部关于探索建立社会组织第三方评估机制的</a></li>
+                                <li><a href="http://www.90315.org/news/view/303-1.html" title="国务院关于同意在天津等12个城市设立跨境电子商务综合试验区的批复" style="color:; font-weight:">国务院关于同意在天津等12个城市设立跨境电子</a></li>
+                                <li><a href="http://www.90315.org/news/view/286-1.html" title="国务院办公厅关于印发2015年全国打击侵犯知识产权和制售假冒伪劣商品工作要点的通知" style="color:; font-weight:">国务院办公厅关于印发2015年全国打击侵犯知识</a></li>
+                                <li><a href="http://www.90315.org/news/view/262-1.html" title="两部委发文加强企业环境信用体系建设 惩戒环境违法" style="color:; font-weight:">两部委发文加强企业环境信用体系建设惩戒环境</a></li>
+                                <li><a href="http://www.90315.org/news/view/257-1.html" title="六部门发《关于开展社会诚信宣传教育的工作意见》" style="color:; font-weight:">六部门发《关于开展社会诚信宣传教育的工作意</a></li>
+                                <li><a href="http://www.90315.org/news/view/256-1.html" title="中华人民共和国国家统计局公告中华人民共和国国家统计局公告" style="color:; font-weight:">中华人民共和国国家统计局公告中华人民共和国</a></li>
+                                </ul></div>
+            </div>
+        </div>
+        <div class="left4">
+        	<div class="board">
+            	<div class="head"><span class="column">行业信用专家</span><span class="more"><a href="http://www.90315.org/news/more/16-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/275-1.html" title="林钧跃：信用管理技术和信用经济基础理论研究诸多空白需要填补" style="color:; font-weight:">林钧跃：信用管理技术和信用经济基础理论研究</a></li>
+                                <li><a href="http://www.90315.org/news/view/274-1.html" title="赵凤梧：对信用管理师职业资格网上远程培训的开班寄语" style="color:; font-weight:">赵凤梧：对信用管理师职业资格网上远程培训的</a></li>
+                                <li><a href="http://www.90315.org/news/view/273-1.html" title="陈贵：失信惩戒应重视“市场联防机制”" style="color:; font-weight:">陈贵：失信惩戒应重视“市场联防机制”</a></li>
+                                <li><a href="http://www.90315.org/news/view/105-1.html" title="厉以宁：政府信用是社会信用体系的重心" style="color:; font-weight:">厉以宁：政府信用是社会信用体系的重心</a></li>
+                                <li><a href="http://www.90315.org/news/view/104-1.html" title="孙晓华：实现中国梦须大力加强诚信建设" style="color:; font-weight:">孙晓华：实现中国梦须大力加强诚信建设</a></li>
+                                <li><a href="http://www.90315.org/news/view/103-1.html" title="魏建国：重塑诚信是中国走向市场强国的根本" style="color:; font-weight:">魏建国：重塑诚信是中国走向市场强国的根本</a></li>
+                                <li><a href="http://www.90315.org/news/view/102-1.html" title="吴敬琏：加快第三方信用评估机构的建立" style="color:; font-weight:">吴敬琏：加快第三方信用评估机构的建立</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    	<div class="right4">
+        	<div class="board">
+            	<div class="head"><span class="column">信用政策法规</span><span class="more"><a href="http://www.90315.org/news/more/2-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/480-1.html" title="国务院办公厅关于加快推进 “多证合一”改革的指导意见" style="color:; font-weight:">国务院办公厅关于加快推进“多证合一”改革的</a></li>
+                                <li><a href="http://www.90315.org/news/view/471-1.html" title="我国地灾防治工程行业从业单位信用等级评价正式启动" style="color:; font-weight:">我国地灾防治工程行业从业单位信用等级评价正</a></li>
+                                <li><a href="http://www.90315.org/news/view/469-1.html" title="发展改革委：关于加强交通出行领域信用建设的指导意见" style="color:; font-weight:">发展改革委：关于加强交通出行领域信用建设的</a></li>
+                                <li><a href="http://www.90315.org/news/view/468-1.html" title="国务院办公厅关于加强 个人诚信体系建设的指导意见" style="color:; font-weight:">国务院办公厅关于加强个人诚信体系建设的指导</a></li>
+                                <li><a href="http://www.90315.org/news/view/465-1.html" title="国家企业信用信息公示系统正式开通" style="color:; font-weight:">国家企业信用信息公示系统正式开通</a></li>
+                                <li><a href="http://www.90315.org/news/view/438-1.html" title="国务院办公厅关于政府部门涉企信息 统一归集公示工作实施方案的复函" style="color:; font-weight:">国务院办公厅关于政府部门涉企信息统一归集公</a></li>
+                                <li><a href="http://www.90315.org/news/view/418-1.html" title="P2P资金存管模式逐渐清晰" style="color:; font-weight:">P2P资金存管模式逐渐清晰</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear2"></div>
+    <div class="ggw3">
+    	       		<a href="http://www.90315.org/" title="http//www.90315.org"><img src="./90315信用评价系统_files/201508111639050.jpeg"></a>
+            </div>
+    <div class="clear2"></div>
+    <div class="news4">
+    	<div class="left4">
+        	<div class="xinyongzixun">
+            	<div class="head"><span class="column">信用资讯</span><span class="more"><a href="http://www.90315.org/news/more/17-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><span class="addtime">2017-01-04</span><a href="http://www.90315.org/news/view/466-1.html" title="“十三五”期间旅游失信行为将纳入社会信用体系" style="color:; font-weight:">“十三五”期间旅游失信行为将纳入社会信用体</a></li>
+                                <li><span class="addtime">2016-09-28</span><a href="http://www.90315.org/news/view/448-1.html" title="人社信用评价体系推出" style="color:; font-weight:">人社信用评价体系推出</a></li>
+                                <li><span class="addtime">2016-08-24</span><a href="http://www.90315.org/news/view/436-1.html" title="人社部劳动监察局负责人就《企业劳动保障守法诚信等级评价办法》答记者问" style="color:; font-weight:">人社部劳动监察局负责人就《企业劳动保障守法</a></li>
+                                <li><span class="addtime">2016-08-08</span><a href="http://www.90315.org/news/view/432-1.html" title="诚信——员工在职场发展的前提" style="color:; font-weight:">诚信——员工在职场发展的前提</a></li>
+                                <li><span class="addtime">2016-04-21</span><a href="http://www.90315.org/news/view/384-1.html" title="我国征信市场潜在规模达万亿元" style="color:; font-weight:">我国征信市场潜在规模达万亿元</a></li>
+                                <li><span class="addtime">2016-04-18</span><a href="http://www.90315.org/news/view/377-1.html" title="资深媒体人李泳论诚信" style="color:; font-weight:">资深媒体人李泳论诚信</a></li>
+                                <li><span class="addtime">2016-04-18</span><a href="http://www.90315.org/news/view/376-1.html" title="诚信的小船说翻就翻！公交IC卡押金的水分这么深！" style="color:; font-weight:">诚信的小船说翻就翻！公交IC卡押金的水分这么</a></li>
+                                </ul></div>
+            </div>
+        </div>
+        <div class="left4">
+        	<div class="xinyongzixun xinyongzixun2">
+            	<div class="head"><span class="column">信用论坛</span><span class="more"><a href="http://www.90315.org/news/more/18-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><span class="addtime">2016-09-28</span><a href="http://www.90315.org/news/view/449-1.html" title="九部门发通知：招投标活动中对失信被执行人实施联合惩戒" style="color:; font-weight:">九部门发通知：招投标活动中对失信被执行人实</a></li>
+                                <li><span class="addtime">2016-08-24</span><a href="http://www.90315.org/news/view/437-1.html" title="规范居民身份证使用管理 不良信用" style="color:; font-weight:">规范居民身份证使用管理不良信用</a></li>
+                                <li><span class="addtime">2016-08-08</span><a href="http://www.90315.org/news/view/431-1.html" title="个人诚信平台——建成诚信体系谁受益？" style="color:; font-weight:">个人诚信平台——建成诚信体系谁受益？</a></li>
+                                <li><span class="addtime">2016-06-21</span><a href="http://www.90315.org/news/view/419-1.html" title="2016中国老年健康产业诚信发展论坛在京举行" style="color:; font-weight:">2016中国老年健康产业诚信发展论坛在京举行</a></li>
+                                <li><span class="addtime">2016-06-12</span><a href="http://www.90315.org/news/view/411-1.html" title="国人为什么不讲诚信？" style="color:; font-weight:">国人为什么不讲诚信？</a></li>
+                                <li><span class="addtime">2016-04-21</span><a href="http://www.90315.org/news/view/383-1.html" title="2016中国信用4.16高峰论坛成功举办" style="color:; font-weight:">2016中国信用4.16高峰论坛成功举办</a></li>
+                                <li><span class="addtime">2016-04-18</span><a href="http://www.90315.org/news/view/379-1.html" title="诚信讨论再引学子深思" style="color:; font-weight:">诚信讨论再引学子深思</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    	<div class="right4">
+        	<div class="xinyongzixun xinyongzixun3">
+            	<div class="head"><span class="column">信用常识</span><span class="more"><a href="http://www.90315.org/news/more/19-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><span class="addtime">2016-09-28</span><a href="http://www.90315.org/news/view/450-1.html" title="失信被执行人评先受奖从业“处处受限”" style="color:; font-weight:">失信被执行人评先受奖从业“处处受限”</a></li>
+                                <li><span class="addtime">2016-06-12</span><a href="http://www.90315.org/news/view/412-1.html" title="图解企业纳税信用" style="color:; font-weight:">图解企业纳税信用</a></li>
+                                <li><span class="addtime">2016-05-10</span><a href="http://www.90315.org/news/view/396-1.html" title="个人信用报告能改吗？" style="color:; font-weight:">个人信用报告能改吗？</a></li>
+                                <li><span class="addtime">2016-04-18</span><a href="http://www.90315.org/news/view/374-1.html" title="社会信用体系建设部际联席会议成员单位(排名不分先后)" style="color:; font-weight:">社会信用体系建设部际联席会议成员单位(排名</a></li>
+                                <li><span class="addtime">2016-01-05</span><a href="http://www.90315.org/news/view/285-1.html" title="我国社会信用体系建设的发展历程" style="color:; font-weight:">我国社会信用体系建设的发展历程</a></li>
+                                <li><span class="addtime">2015-08-12</span><a href="http://www.90315.org/news/view/116-1.html" title="企业信用评级认证的作用" style="color:; font-weight:">企业信用评级认证的作用</a></li>
+                                <li><span class="addtime">2015-08-12</span><a href="http://www.90315.org/news/view/115-1.html" title="如何使用信用报告" style="color:; font-weight:">如何使用信用报告</a></li>
+                                </ul></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear2"></div>
+    <div class="ggw4">
+    	       		<a href="http://www.90315.org/#" title="1"><img src="./90315信用评价系统_files/201605201442480.jpeg"></a>
+            </div>
+    <div class="clear2"></div>
+    		<div class="difangpindao">
+            	<div class="head"><span class="column">地方频道</span><span class="more"><a href="http://www.90315.org/news/more/20-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/346-1.html" title="北京" style="color:; font-weight:">北京</a></li>
+                                <li><a href="http://www.90315.org/news/view/345-1.html" title="天津" style="color:; font-weight:">天津</a></li>
+                                <li><a href="http://www.90315.org/news/view/344-1.html" title="上海" style="color:; font-weight:">上海</a></li>
+                                <li><a href="http://www.90315.org/news/view/343-1.html" title="重庆" style="color:; font-weight:">重庆</a></li>
+                                <li><a href="http://www.90315.org/news/view/342-1.html" title="河北" style="color:; font-weight:">河北</a></li>
+                                <li><a href="http://www.90315.org/news/view/341-1.html" title="河南" style="color:; font-weight:">河南</a></li>
+                                <li><a href="http://www.90315.org/news/view/340-1.html" title="深圳市" style="color:; font-weight:">深圳市</a></li>
+                                <li><a href="http://www.90315.org/news/view/339-1.html" title="厦门市" style="color:; font-weight:">厦门市</a></li>
+                                <li><a href="http://www.90315.org/news/view/338-1.html" title="青岛市" style="color:; font-weight:">青岛市</a></li>
+                                <li><a href="http://www.90315.org/news/view/337-1.html" title="宁波市" style="color:; font-weight:">宁波市</a></li>
+                                <li><a href="http://www.90315.org/news/view/336-1.html" title="大连市" style="color:; font-weight:">大连市</a></li>
+                                <li><a href="http://www.90315.org/news/view/227-1.html" title="北京" style="color:; font-weight:">北京</a></li>
+                                <li><a href="http://www.90315.org/news/view/226-1.html" title="天津" style="color:; font-weight:">天津</a></li>
+                                <li><a href="http://www.90315.org/news/view/221-1.html" title="云南" style="color:; font-weight:">云南</a></li>
+                                <li><a href="http://www.90315.org/news/view/220-1.html" title="辽宁" style="color:; font-weight:">辽宁</a></li>
+                                <li><a href="http://www.90315.org/news/view/219-1.html" title="黑龙江" style="color:; font-weight:">黑龙江</a></li>
+                                <li><a href="http://www.90315.org/news/view/218-1.html" title="湖南" style="color:; font-weight:">湖南</a></li>
+                                <li><a href="http://www.90315.org/news/view/217-1.html" title="安徽" style="color:; font-weight:">安徽</a></li>
+                                <li><a href="http://www.90315.org/news/view/216-1.html" title="山东" style="color:; font-weight:">山东</a></li>
+                                <li><a href="http://www.90315.org/news/view/215-1.html" title="新疆" style="color:; font-weight:">新疆</a></li>
+                                <li><a href="http://www.90315.org/news/view/214-1.html" title="江苏" style="color:; font-weight:">江苏</a></li>
+                                <li><a href="http://www.90315.org/news/view/213-1.html" title="浙江" style="color:; font-weight:">浙江</a></li>
+                                <li><a href="http://www.90315.org/news/view/212-1.html" title="江西" style="color:; font-weight:">江西</a></li>
+                                <li><a href="http://www.90315.org/news/view/211-1.html" title="湖北" style="color:; font-weight:">湖北</a></li>
+                                <li><a href="http://www.90315.org/news/view/210-1.html" title="广西" style="color:; font-weight:">广西</a></li>
+                                <li><a href="http://www.90315.org/news/view/209-1.html" title="甘肃" style="color:; font-weight:">甘肃</a></li>
+                                <li><a href="http://www.90315.org/news/view/208-1.html" title="山西" style="color:; font-weight:">山西</a></li>
+                                <li><a href="http://www.90315.org/news/view/207-1.html" title="内蒙" style="color:; font-weight:">内蒙</a></li>
+                                <li><a href="http://www.90315.org/news/view/206-1.html" title="陕西" style="color:; font-weight:">陕西</a></li>
+                                <li><a href="http://www.90315.org/news/view/205-1.html" title="吉林" style="color:; font-weight:">吉林</a></li>
+                                <li><a href="http://www.90315.org/news/view/204-1.html" title="福建" style="color:; font-weight:">福建</a></li>
+                                <li><a href="http://www.90315.org/news/view/203-1.html" title="贵州" style="color:; font-weight:">贵州</a></li>
+                                <li><a href="http://www.90315.org/news/view/202-1.html" title="广东" style="color:; font-weight:">广东</a></li>
+                                <li><a href="http://www.90315.org/news/view/201-1.html" title="青海" style="color:; font-weight:">青海</a></li>
+                                <li><a href="http://www.90315.org/news/view/200-1.html" title="西藏" style="color:; font-weight:">西藏</a></li>
+                                <li><a href="http://www.90315.org/news/view/199-1.html" title="四川" style="color:; font-weight:">四川</a></li>
+                                <li><a href="http://www.90315.org/news/view/198-1.html" title="宁夏" style="color:; font-weight:">宁夏</a></li>
+                                <li><a href="http://www.90315.org/news/view/197-1.html" title="海南" style="color:; font-weight:">海南</a></li>
+                                <li><a href="http://www.90315.org/news/view/196-1.html" title="台湾" style="color:; font-weight:">台湾</a></li>
+                                <li><a href="http://www.90315.org/news/view/195-1.html" title="香港" style="color:; font-weight:">香港</a></li>
+                                </ul></div>
+            </div>
+    <div class="clear2"></div>
+    		<div class="chengyuandanwei">
+            	<div class="head"><span class="column">国家信用产业发展联盟成员单位</span><span class="more"><a href="http://www.90315.org/news/more/21-1.html"><img src="./90315信用评价系统_files/more.gif"></a></span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                                <li><a href="http://www.90315.org/news/view/158-1.html" title="成员单位"><img src="./90315信用评价系统_files/201508131449590.jpeg"></a></li>
+                                <li><a href="http://www.90315.org/news/view/157-1.html" title="成员单位"><img src="./90315信用评价系统_files/201508131449470.jpeg"></a></li>
+                                <li><a href="http://www.90315.org/news/view/156-1.html" title="成员单位"><img src="./90315信用评价系统_files/201508131449340.jpeg"></a></li>
+                                <li><a href="http://www.90315.org/news/view/155-1.html" title="成员单位"><img src="./90315信用评价系统_files/201508131449180.jpeg"></a></li>
+                                <li><a href="http://www.90315.org/news/view/154-1.html" title="成员单位"><img src="./90315信用评价系统_files/201508131449030.jpeg"></a></li>
+                                <li><a href="http://www.90315.org/news/view/153-1.html" title="成员单位"><img src="./90315信用评价系统_files/201508131448460.jpeg"></a></li>
+                                </ul></div>
+            </div>
+</div>
+<div class="html">
+    <div class="clear2"></div>
+    		<div class="link">
+            	<div class="head"><span class="column">友情链接</span></div>
+                <div class="clear2"></div>
+                <div class="list"><ul>
+                	        			<li><a href="http://www.miit.gov.cn/" target="_blank">国家工信部</a></li>
+            		        			<li><a href="http://www.mof.gov.cn/" target="_blank">国家财政部</a></li>
+            		        			<li><a href="http://www.cncaprc.gov.cn/" target="_blank">全国老龄委</a></li>
+            		        			<li><a href="http://www.mca.gov.cn/" target="_blank">国家民政部</a></li>
+            		        			<li><a href="http://www.cnta.gov.cn/" target="_blank">国家旅游局</a></li>
+            		        			<li><a href="http://www.forestry.gov.cn/" target="_blank">国家林业局</a></li>
+            		        			<li><a href="http://www.mohrss.gov.cn/" target="_blank">国家人保部</a></li>
+            		        			<li><a href="http://www.sdpc.gov.cn/" target="_blank">国家发改委</a></li>
+            		        			<li><a href="http://www.sac.gov.cn/" target="_blank">国家标准委</a></li>
+            		        			<li><a href="http://www.cnca.gov.cn/" target="_blank">国家认监委</a></li>
+            		        			<li><a href="http://www.ccn.com.cn/" target="_blank">中国消费者报</a></li>
+            		        			<li><a href="http://www.satcm.gov.cn/" target="_blank">国家中医局</a></li>
+            		        			<li><a href="http://www.sfda.gov.cn/" target="_blank">国家食药局</a></li>
+            		        			<li><a href="http://www.saic.gov.cn/" target="_blank">国家工商总局</a></li>
+            		        			<li><a href="http://www.nhfpc.gov.cn/" target="_blank">国家卫计委</a></li>
+            		        			<li><a href="http://www.gov.cn/" target="_blank">中国政府网</a></li>
+            		        			<li><a href="http://www.moe.edu.cn/" target="_blank">国家教育部</a></li>
+            		        			<li><a href="http://www.nhc.org.cn/" target="_blank">全国健工委</a></li>
+            		                </ul></div>
+            </div>
+    <div class="clear2"></div>
+    <div class="foot"><ul>
+    	<li class="line">
+        	<a href="http://www.90315.org/news/info/1-1.html">关于我们</a> | 
+            <a href="http://www.90315.org/news/info/22-1.html">联系方式</a> | 
+            <a href="http://www.90315.org/news/info/23-1.html">免责声明</a> | 
+            <a href="http://www.90315.org/news/info/24-1.html">成员加盟</a> | 
+            <a href="http://www.90315.org/news/info/25-1.html">认证申请</a> | 
+            <a href="http://www.90315.org/news/info/26-1.html">法律顾问</a> 
+        </li>
+        <li>版权所有 90315信用评价系统  © www.90315.org  Copyright all national credit evaluation system </li>
+        
+        <li>承办单位：国信联督（北京）信用评价中心 | 第三方评价:信用评级、认证机构</li>
+        <li>指导文件：国办发(2014)第21号《国务院社会信用体系建设规划纲要（2014-2020年）》通知</li>
+        <li>国办(2007)第17号《国务院办公厅关于社会信用体系建设的若干意见》通知</li>
+        
+        <li>全国统一服务热线:40-010-90315    信箱:xy90315@163.com</li>
+        <li>工信部备案编号： 京ICP备15040191号-1</li>
+        <!--<li>公安局备案编号：            号  </li>-->
+        <li class="likeqiang">国务院总理李克强：对出具假报告、假认证等中介机构加大打击力度 严惩违背诚信行为</li>
+        <li><script type="text/javascript">
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe1ab0bc4fb1785ce8a43bd9f00543e9d' type='text/javascript'%3E%3C/script%3E"));
+
+</script><script src="./90315信用评价系统_files/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=e1ab0bc4fb1785ce8a43bd9f00543e9d" target="_blank"><img border="0" src="./90315信用评价系统_files/21.gif" width="20" height="20"></a></li>
+    </ul></div>
+</div>
+
+
+</body></html>
